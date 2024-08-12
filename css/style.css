@@ -1,0 +1,604 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background-color: #4682B4;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea, form select, form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1, h2 {
+    color: #4682B4;
+}
+
+/* Doctors and Key Persons section */
+#doctors {
+    padding: 2em;
+    background-color: #f0f0f0;
+    margin-top: 2em;
+    border-radius: 5px;
+   
+}
+
+#doctors h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    
+}
+
+.grid-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.grid-item img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+
+.grid-item p {
+    margin: 0.5em 0;
+}
+
+/* Doctor Profiles section */
+#doctor-profiles {
+    padding: 2em;
+    background-color: #f0f0f0;
+    margin-top: 2em;
+    border-radius: 5px;
+}
+
+.profile {
+    text-align: center;
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+.profile img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.profile h2 {
+    margin: 0.5em 0;
+}
+
+.profile p {
+    margin: 0.5em 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #doctor-profiles {
+        padding: 1em;
+    }
+
+    .profile {
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    #doctor-profiles {
+        padding: 0.5em;
+    }
+
+    .profile {
+        padding: 0.5em;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Navigation styles */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 1em;
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background-color: #365f91; /* Background color on hover */
+    color: white; /* Text color on hover */
+    border-radius: 5px; /* Optional: rounded corners on hover */
+}
+
+/* Add underline effect on hover for better visual */
+header nav ul li a::after {
+    content: "";
+    transition: width 0.3s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Full width underline effect on hover */
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+/* Ticker wrapper styles */
+.ticker-wrapper {
+    background: #333;
+    color: white;
+    padding: 0.5em 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.ticker {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: ticker-scroll 15s linear infinite;
+}
+
+.ticker p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation for scrolling */
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ticker {
+        animation-duration: 20s;
+    }
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    background-color: #4682B4; /* Green color for the button */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4682B4; /* Darker green when hovered */
+}
+
+/* Container for the buttons */
+.cta-buttons {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-buttons {
+        margin-top: 1em;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5em 0;
+    }
+}
+
+/* Showcase section styles */
+
+.building-image {
+    display: block;
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Example styles for h2 to ensure it aligns with other content */
+#showcase h2 {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF; /* New blue color */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Container for the buttons */
+.cta-buttons {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    .showcase-image {
+        max-width: 80%; /* Adjust size for smaller screens */
+    }
+}
+
+/* Footer container styling */
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: #fff; /* White text color */
+    padding: 2em 1em; /* Add padding */
+    text-align: center; /* Center align the text */
+    position: relative; /* Position relative for proper alignment */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer information styling */
+.footer-info {
+    margin-bottom: 1em;
+}
+
+/* Footer logo styling */
+.footer-logo img {
+    max-width: 150px; /* Adjust logo size */
+    height: auto;
+}
+
+/* Footer links styling */
+.footer-info a {
+    color: #fff; /* White color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-info a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-info {
+        font-size: 0.9em; /* Slightly smaller text on mobile */
+    }
+
+    .footer-logo img {
+        max-width: 120px; /* Adjust logo size for smaller screens */
+    }
+}
+
+/* General styles for the contact page */
+#contact-us {
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact-us h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#contact-us address p {
+    margin: 0.5em 0;
+    font-size: 1em;
+}
+
+#contact-us address a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact-us address a:hover {
+    text-decoration: underline;
+}
+
+/* Follow Us section styling */
+#follow-us {
+    margin-top: 2em;
+}
+
+#follow-us h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+#follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+#follow-us li {
+    display: inline;
+    margin-right: 1em;
+}
+
+#follow-us a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#follow-us a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contact-us {
+        padding: 1em;
+    }
+
+    #contact-us h1 {
+        font-size: 1.5em;
+    }
+
+    #follow-us h2 {
+        font-size: 1.2em;
+    }
+
+    #follow-us li {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+}
+
+/* Doctors section styles */
+#doctors {
+    padding: 2em;
+    background-color: #f0f0f0;
+    margin-top: 2em;
+    border-radius: 5px;
+}
+
+#doctors h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+    gap: 1em; /* Add some space between the items */
+}
+
+.flex-item {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 300px; /* Optional: maximum width for each item */
+}
+
+.flex-item img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+
+.flex-item p {
+    margin: 0.5em 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+    
+    .flex-item {
+        max-width: 90%; /* Ensure items do not overflow on smaller screens */
+    }
+}
+
+/* slider homepage image */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  @keyframes fade{
+    from{
+      opacity:0.4;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  
+  
+  #slider{
+    margin:0 auto;
+    width:80%;
+    overflow:hidden;
+  }
+  
+  .slides{
+    overflow:hidden;
+    animation-name:fade;
+    animation-duration:1s;
+    display:none;
+  }
+  
+  img{
+    width:100%;
+  }
+  
+  #dot{
+    margin:0 auto;
+    text-align:center;
+  }
+  .dot{
+    display:inline-block;
+    border-radius:50%;
+    background:#d3d3d3;
+    padding:8px;
+    margin:10px 5px;
+  }
+  
+  .active{
+    background:black;
+  }
+  
+  @media (max-width:567px){
+    #slider{
+      width:100%;
+  
+    }
+  }
+  
+  #heading{
+    display:block;
+    text-align:center;
+    font-size:2em;
+    margin:10px 0px;
+  
+  }

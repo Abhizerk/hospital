@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Shree Laxmi Narayan Ayurvedic Aushadhaalay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Book an Appointment</h1>
+        <p>Schedule your appointment with our medical professionals easily.</p>
+        <form action="https://formspree.io/f/manwowgb" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="emergency">Emergency Care</option>
+                <option value="outpatient">Outpatient Services</option>
+                <option value="inpatient">Inpatient Services</option>
+            </select>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>Contact Us</h2>
+                <p>Address: Ward no 14, EID GHA, Refugee Colony, Motihari, Bihar 845401</p>
+                <p>Phone: <a href="tel:+919934236685">+91 9934236685</a></p>
+                <p>Email: <a href="mailto:contact@slnayurvedic.com">contact@slnayurvedic.com</a></p>
+            </div>
+        <p>&copy; 2024 Shree Laxmi Narayan Ayurvedic Aushadhaalay. All rights reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
